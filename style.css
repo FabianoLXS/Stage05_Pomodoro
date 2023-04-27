@@ -7,14 +7,21 @@
 
 :root {
   font-size: 62.5%;
+
+  --bg-color: #121214;
+  --primary-color: #42D3FF;
+  --text-color: #FFFFFF;
+  --btn-background: rgba(66, 211, 255, 0.13);
 }
 
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background: var(--bg-color);
   height: 92vh;  
+
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -23,10 +30,9 @@ main {
   align-items: center;
 
   
-  font-family: 'Roboto', sans-serif;
 
   font-size: 8.8rem;
-  color: #FFFFFF;
+  color: var(--text-color);
   gap: 1.6rem;
 }
 
@@ -42,7 +48,7 @@ main {
   justify-content: center;
   align-items: center;
 
-  background: rgba(66, 211, 255, 0.13);
+  background: var(--btn-background);
   border-radius: 9999px;
 
   padding: 2.2rem 4.0rem;
