@@ -18,25 +18,28 @@
 <body>
   <main>
     <div class="timer-wrapper">
-      <div id="hours">
-        20
-      </div>
-      <div>
-        :
-      </div>
-      <div id="minutes">
-        00
-      </div>
+      <span id="minutes">20</span>
+      <span>:</span>
+      <span id="seconds">00</span>
     </div>
-    <div class="button-wrapper">
-      <button id="play-pause"><img src="./assets/play-circle.png" alt="play button"></button>
-      <button id="timer-stop"><img src="./assets/stopwatch.png" alt="stopwatch button"></button>
+    <div class="controls">
+      <button id="play-pause">
+        <img id="play" src="./assets/play-circle.png" alt="play button">
+        <img id="pause" src="./assets/pause-circle.png" alt="pause button">
+      </button>
+      <button id="timer-stop">
+        <img id="set" src="./assets/stopwatch.png" alt="stopwatch button">
+        <img id="stop" src="./assets/stop-circle.png" alt="stop button">
+      </button>
     </div>   
   </main>
 
   <footer>
     <div class="song">
-    <button id="song-button"><img src="./assets/volume-medium.png" alt="volume button"></button>
+    <button id="song-button">
+      <img id="volume" src="./assets/volume-medium.png" alt="volume button">
+      <img id="mute" src="./assets/volume-mute.png" alt="mute volume button">
+    </button>
     </div>
   </footer>
 </body>
