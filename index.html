@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <script src="./js/script.js" defer type="module"></script>
   <title>FocusTimer</title>
 </head>
 
@@ -22,31 +21,32 @@
       <span>:</span>
       <span id="seconds">00</span>
     </div>
-
+    
     <div class="controls">
       <button id="play-pause">
         <img class="play" src="./assets/play-circle.png" alt="play button">
         <img class="pause hide" src="./assets/pause-circle.png" alt="pause button">
       </button>
-
+      
       <button id="timer-stop">
         <img class="set" src="./assets/stopwatch.png" alt="stopwatch button">
         <img class="stop hide" src="./assets/stop-circle.png" alt="stop button">
       </button>
-
+      
     </div>   
   </main>
-
+  
   <footer>
     <div class="song">
-
-    <button id="song-button">
-      <img class="volume" src="./assets/volume-medium.png" alt="volume button">
-      <img class="mute hide" src="./assets/volume-mute.png" alt="mute volume button">
-    </button>
-    
+      
+      <button id="song-button">
+        <img class="soundOn hide" src="./assets/volume-medium.png" alt="volume button">
+        <img class="soundOff" src="./assets/volume-mute.png" alt="mute volume button">
+      </button>
+      
     </div>
   </footer>
+  <script src="./js/script.js" defer type="module"></script>
 </body>
 
 </html>
