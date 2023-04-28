@@ -5,15 +5,16 @@ const stopBtn = document.querySelector("#stop")
 
 playBtn.addEventListener
 
-
-
 //Modal
 const modal = {
-  controls: document.querySelector("#controls"),
-start() {
-  modal.controls.classList.add("hide")
-},
-stop() {
-  modal.controls.classList.remove("hide")
-},
+  playBtn: document.querySelector("#play"),
+  pauseBtn: document.querySelector("#pause"),
+  setBtn: document.querySelector("#set"),
+  stopBtn: document.querySelector("#stop"),
+  start() {
+    modal.playBtn.classList.add("hide")
+  },
+  stop() {
+    modal.controls.classList.remove("hide")
+  },
 }
