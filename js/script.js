@@ -5,12 +5,28 @@ const stopBtn = document.querySelector(".stop")
 const soundOnBtn = document.querySelector(".soundOn")
 const soundOffBtn = document.querySelector(".soundOff")
 const minutesDisplay = document.querySelector("#minutes")
-const seconsDisplay = document.querySelector("#seconds")
+const secondsDisplay = document.querySelector("#seconds")
 let minutes
+
+function countDown() {
+  setTimeout(function () {
+    let seconds = Number(secondsDisplay.textContent)
+    if(seconds <= 0) {
+      seconds = 60
+    }
+
+   secondsDisplay.textContent = seconds - 1
+   countDown()
+  }, 1000)
+}
 
 playBtn.addEventListener('click', function() {
   playBtn.classList.add('hide')
   pauseBtn.classList.remove('hide')
+  setBtn.classList.add('hide')
+  stopBtn.classList.remove('hide')
+
+  countDown()
 })
 
 pauseBtn.addEventListener("click", function () {
