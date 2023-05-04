@@ -80,6 +80,8 @@ stopBtn.addEventListener("click", function () {
   stopBtn.classList.add("hide")
   playBtn.classList.remove("hide")
   pauseBtn.classList.add("hide")
+  minutesDisplay.textContent = String().padStart(2, "0")
+  secondsDisplay.textContent = String().padStart(2, "0")
 })
 
 soundOnBtn.addEventListener('click', function() {
