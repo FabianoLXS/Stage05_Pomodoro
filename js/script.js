@@ -9,8 +9,17 @@ const secondsDisplay = document.querySelector("#seconds")
 let minutes
 let timerTimeOut
 
-function resetTimer() {
 
+function resetControls() {
+  buttonPlay.classList.remove("hide")
+  buttonPause.classList.add("hide")
+  buttonSet.classList.remove("hide")
+  buttonStop.classList.add("hide")
+}
+
+function resetTimer() {
+updateTimerDisplay(minutes, 0)
+clearTimeout(timerTimeOut)
 }
 
 function updateTimerDisplay(minutes, seconds) {
