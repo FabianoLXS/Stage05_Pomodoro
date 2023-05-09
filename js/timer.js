@@ -35,3 +35,6 @@ function countDown() {
     countDown()
   }, 1000)
 }
+
+//named export
+export { countDown, resetTimer }
