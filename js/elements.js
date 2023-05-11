@@ -10,10 +10,10 @@ const secondsDisplay = document.querySelector(".seconds")
 export {
   buttonPlay,
   buttonPause,
-  buttonStop,
   buttonSet,
-  buttonSoundOn,
+  buttonStop,
   buttonSoundOff,
+  buttonSoundOn,
   minutesDisplay,
-  secondsDisplay
+  secondsDisplay,
 }

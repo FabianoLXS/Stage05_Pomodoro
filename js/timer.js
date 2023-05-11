@@ -4,12 +4,15 @@ export default function Timer({
   minutesDisplay,
   secondsDisplay,
   resetControls,
+  sound,
 }) {
   let timerTimeOut
   let minutes = Number(minutesDisplay.textContent)
 
-  function updateDisplay(minutes, seconds) {
-    minutesDisplay.textContent = String(minutes).padStart(2, "0")
+  function updateDisplay(newMinutes, seconds) {
+    newMinutes = newMinutes === undefined ? minutes : newMinutes
+    seconds = seconds === undefined ? 0 : seconds
+    minutesDisplay.textContent = String(newMinutes).padStart(2, "0")
     secondsDisplay.textContent = String(seconds).padStart(2, "0")
   }
 
@@ -26,7 +29,7 @@ export default function Timer({
 
       updateDisplay(minutes, 0)
 
-      if ( isFinished ) {
+      if (isFinished) {
         resetControls()
         updateDisplay()
         Sounds().timeEnd()

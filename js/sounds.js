@@ -1,4 +1,4 @@
-export default function() {
+export default function () {
   const buttonPressAudio = new Audio(
     "https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true"
   )
@@ -8,24 +8,20 @@ export default function() {
   const bgAudio = new Audio(
     "https://github.com/maykbrito/automatic-video-creator/blob/master/audios/bg-audio.mp3?raw=true"
   )
-bgAudio.loop
 
-function pressButton() {
-  buttonPressAudio.play()
-}
+  bgAudio.loop = true
 
-function timeEnd() {
-  kitchenTimer.play()
-}
+  function pressButton() {
+    buttonPressAudio.play()
+  }
 
-function bgAudioStart() {
-  bgAudio.play()
-}
+  function timeEnd() {
+    kitchenTimer.play()
+  }
 
   return {
-  pressButton,
-  timeEnd,
-  bgAudioStart
+    pressButton,
+    timeEnd,
+    bgAudio,
+  }
 }
-}
-
